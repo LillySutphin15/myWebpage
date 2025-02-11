@@ -1,14 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Hobbies</title>
-  </head>
-  <body>
-    <h1>Hobbies</h1>
-    <p>I love to ride atvs, draw, play video games, and work on cars.</p>
-    <a href="..">Home</a></p>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies Page</title>
+</head>
+<body>
+    <h1>Welcome to the Hobbies Page</h1>
+    <button id="hobbyButton">Show My Hobbies</button>
+    <ul id="hobbyList" style="display: none;">
+      <li>ride atvs/dirtbikes</li>
+      <li>work on cars</li>
+      <li>draw</li>
+      <li>Playing video games with friends</li>
+  </ul>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("hobbyButton").addEventListener("click", function() {
+                let list = document.getElementById("hobbyList");
+                if (list.style.display === "none") {
+                    list.style.display = "block"; // Show the list
+                    this.textContent = "Hide My Hobbies"; // Change button text
+                } else {
+                    list.style.display = "none"; // Hide the list
+                    this.textContent = "Show My Hobbies"; // Reset button text
+                }
+            });
+        });
+    </script>
+</body>
+  <p>
+  <a href="..">Home</a></p>
+  </p>
 </html>
