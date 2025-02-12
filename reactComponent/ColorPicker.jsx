@@ -11,24 +11,7 @@ const colorsData = [
   { id: 7, name: "Pink", hex: "#FFC0CB" }
 ];
 // ColorItem component to display one color
-const ColorItem = ({ color, onClick }) => {
-  return (
-    <button
-      onClick={() => onClick(color.hex)}
-      style={{
-        backgroundColor: color.hex,
-        color: "black",
-        border: "none",
-        padding: "10px 20px",
-        cursor: "pointer",
-        borderRadius: "5px",
-        fontWeight: "bold",
-      }}
-    >
-      {color.name}
-    </button>
-  );
-};
+
 
 
 function ColorPicker() {
@@ -37,7 +20,7 @@ function ColorPicker() {
 
     return (
         <div style={{ textAlign: "center", padding: "20px", backgroundColor: bgColor, height: "100vh" }}>
-            <h2>Pick a Color</h2>
+            <h2>Pick a Color! Home button is at the bottom of page!</h2>
             <div style={{ display: "flex", justifyContent: "center", gap: "10px", flexWrap: "wrap" }}>
             
                 {colors.map((color) => (
