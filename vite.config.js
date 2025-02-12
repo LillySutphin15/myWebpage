@@ -1,15 +1,17 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+    plugins: [react()],
     base: "/myWebpage/",
     build: {
         outDir: "docs",
         rollupOptions:{
             input: {
-                main: resolve(__dirname, "index.html"),
-                Hobbies: resolve(__dirname, "Hobbies/index.html"),
-                Colors: resolve(__dirname, "Colors/index.html"),
+                main: "./index.html",
+                Hobbies:  "Hobbies/index.html",
+                Colors: "Colors/index.html",
+                react: "react/index.html",
             },
         },
     },
