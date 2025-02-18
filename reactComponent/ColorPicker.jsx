@@ -20,7 +20,8 @@ function ColorPicker() {
 
     return (
         <div style={{ textAlign: "center", padding: "20px", backgroundColor: bgColor, height: "100vh" }}>
-            <h2>Pick a Color! Home button is at the bottom of page!</h2>
+            <h2>Pick a Color!</h2>
+            <h3><a href="../index.html">Go back Home</a></h3>
             <div style={{ display: "flex", justifyContent: "center", gap: "10px", flexWrap: "wrap" }}>
             
                 {colors.map((color) => (
